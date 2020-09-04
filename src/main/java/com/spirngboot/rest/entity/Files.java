@@ -1,7 +1,7 @@
 package com.spirngboot.rest.entity;
 
 public class Files {
-
+	private String id;
 	private String tag;
 	private String name;
 	private String type;
@@ -16,6 +16,14 @@ public class Files {
 		this.name = name;
 		this.type = type;
 		
+	}
+
+	public String getID() {
+		return id;
+	}
+
+	public void setID(String type) {
+		this.id = id;
 	}
 
 	public String getType() {

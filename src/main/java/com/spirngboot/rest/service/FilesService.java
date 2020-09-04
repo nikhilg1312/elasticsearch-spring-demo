@@ -1,5 +1,6 @@
 package com.spirngboot.rest.service;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,10 @@ public class FilesService {
 
 	@Autowired
 	private FilesRepository filesRepository;
+
+	public String uploadFiles(Files newFile) throws IOException {
+		return filesRepository.uploadDocumentToElastic(newFile);
+	}
 	
 	public List<Files> getAllFilesInfo() {
 		
